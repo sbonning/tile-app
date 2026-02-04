@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tile Pattern Tool</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="app">
+    <div class="controls">
+
+    <h1>Tile Pattern Tool</h1>
+
+    <div>
+    <input type="file" id="tileImageInput" />
+    </div>
+    <div>
+    <label>Tile Width:</label>
+    <input type="number" id="tileWidth" value="100">
+    </div>
+    <div>
+    <label>Tile Height:</label>
+    <input type="number" id="tileHeight" value="100">
+    </div>
+    <div>
+    <label>Surface Width:</label>
+    <input type="number" id="surfaceWidth" value="800">
+    </div>
+    <div>
+    <label>Surface Height:</label>
+    <input type="number" id="surfaceHeight" value="600">
+    </div>
+    <div>
+    <label>Layout:</label>
+<select id="layoutType">
+  <option value="grid">Grid</option>
+  <option value="offset">Offset (Brick)</option>
+</select>
+</div>
+<div>
+<label>Rotation:</label>
+<select id="rotationType">
+  <option value="none">None</option>
+  <option value="two">2-way (0 / 180)</option>
+  <option value="four">4-way (0 / 90 / 180 / 270)</option>
+  <option value="random">Random</option>
+</select>
+</div>
+<div>
+<label>Rotation Style:</label>
+<select id="rotationStyle">
+  <option value="random">Random</option>
+  <option value="alternating">Alternating (0 / 180)</option>
+  <option value="double">Double Band (0,0,180,180)</option>
+  <option value="quarter">Quarter Turn (0,90,180,270)</option>
+</select>
+</div>
+<div>
+<label>Rotation Scope:</label>
+<select id="rotationScope">
+  <option value="row">By Row</option>
+  <option value="column">By Column</option>
+</select>
+</div>
+<div>
+<label>Grout Size (px):</label>
+<input type="number" id="groutSize" value="4" min="0">
+</div>
+<div>
+<label>Grout Color:</label>
+<input type="color" id="groutColor" value="#cccccc">
+</div>
+    <button id="generateBtn">Generate Pattern</button>
+
+    <br><br>
+    </div>
+
+    <canvas id="canvas" width="800" height="600"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
